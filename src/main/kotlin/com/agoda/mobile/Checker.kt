@@ -14,5 +14,4 @@ class Checker(private val authorizedPermissions: ArrayList<String>,
         authorizedPermissions.sort()
         permissions.sort()
     }
-
 }

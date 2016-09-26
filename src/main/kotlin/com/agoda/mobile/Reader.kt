@@ -6,5 +6,5 @@ import java.util.*
  * Created by ivillar on 9/24/2016 AD.
  */
 interface PermissionReader {
-    fun getReader() : ArrayList<String>
+    fun getReader() : List<String>
 }

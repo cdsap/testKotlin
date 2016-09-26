@@ -1,26 +1,22 @@
 package com.agoda.mobile;
 
 import org.junit.Test;
+import kotlin.test.assertEquals
 
-/**
- * Created by ivillar on 9/24/2016 AD.
- */
-public class ManifestReaderTest {
+class ManifestReaderTest {
 
     @Test
     fun shouldReadTestProperly() {
-   //     val manifest : String = "<manifest>" +
-   //             "<permission>ssss</permission>" +
-   //             "<permission>ssss</permission></manifest>"
 
-        var xml = "<manifest>\n" +
-                "  <permission category=\"children\">\n" +
-                "  </permission>\n" +
-                "  <permission category=\"web\">\n" +
-                "  </permission>\n" +
-                "</manifest>";
+        var xml = "<manifest>" +
+                "<uses-permission atr=\"222\"/>" +
+                "<uses-permission atr=\"422\"/>" +
+                "<uses-permission atr=\"322\"/>" +
+                "<uses-permission atr=\"122\"/>" +
+                "</manifest>"
 
-        ManifestReader(xml).getReader()
+        val list = ManifestReader(xml).getReader()
+        assertEquals(4, list.size)
     }
 
 }
